@@ -1350,9 +1350,9 @@
             // 
             this.tbGeraNome.BackColor = System.Drawing.SystemColors.MenuText;
             this.tbGeraNome.ForeColor = System.Drawing.SystemColors.Window;
-            this.tbGeraNome.Location = new System.Drawing.Point(559, 143);
+            this.tbGeraNome.Location = new System.Drawing.Point(180, 260);
             this.tbGeraNome.Name = "tbGeraNome";
-            this.tbGeraNome.Size = new System.Drawing.Size(181, 20);
+            this.tbGeraNome.Size = new System.Drawing.Size(118, 20);
             this.tbGeraNome.TabIndex = 19;
             this.tbGeraNome.Text = "ANA MARIA DA SILVA";
             // 
@@ -1435,7 +1435,7 @@
             // 
             this.tbGeraTelefone.BackColor = System.Drawing.SystemColors.MenuText;
             this.tbGeraTelefone.ForeColor = System.Drawing.SystemColors.Window;
-            this.tbGeraTelefone.Location = new System.Drawing.Point(559, 24);
+            this.tbGeraTelefone.Location = new System.Drawing.Point(180, 141);
             this.tbGeraTelefone.Name = "tbGeraTelefone";
             this.tbGeraTelefone.Size = new System.Drawing.Size(118, 20);
             this.tbGeraTelefone.TabIndex = 10;
