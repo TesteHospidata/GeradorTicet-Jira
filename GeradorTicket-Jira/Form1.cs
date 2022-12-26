@@ -3,7 +3,6 @@ using System.Windows.Forms;
 using GeradorTicket_Jira.Entities;
 using GeradorTicket_Jira.Entities.Enums;
 using Faker;
-using SeletorServidor;
 
 namespace GeradorTicket_Jira
 {
@@ -837,11 +836,6 @@ namespace GeradorTicket_Jira
             GeradorTelefone Cel = new GeradorTelefone();
             tbGeraCelular.Text = Cel.GeraTelefone(2);
             Clipboard.SetText(tbGeraCelular.Text);
-        }
-
-        private void servidorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Run(new frmSelServidor);
         }
     }
 }

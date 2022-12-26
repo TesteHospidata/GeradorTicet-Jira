@@ -23,8 +23,8 @@
         #region Código gerado pelo Windows Form Designer
 
         /// <summary>
-        /// Método necessário para suporte ao Designer - não modifique 
-        /// o conteúdo deste método com o editor de código.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -214,8 +214,6 @@
             this.label30 = new System.Windows.Forms.Label();
             this.btNovo = new System.Windows.Forms.Button();
             this.btCopiar = new System.Windows.Forms.Button();
-            this.configuraçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.servidorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.gbIdentificacao.SuspendLayout();
@@ -235,13 +233,7 @@
             // menuStrip1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tipoDeTextoToolStripMenuItem,
-            this.limparF10ToolStripMenuItem,
-            this.copiarF11ToolStripMenuItem,
-            this.sairToolStripMenuItem,
-            this.ajudaToolStripMenuItem,
-            this.opçõesToolStripMenuItem});
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.tipoDeTextoToolStripMenuItem, this.limparF10ToolStripMenuItem, this.copiarF11ToolStripMenuItem, this.sairToolStripMenuItem, this.ajudaToolStripMenuItem, this.opçõesToolStripMenuItem });
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -251,18 +243,7 @@
             // 
             // tipoDeTextoToolStripMenuItem
             // 
-            this.tipoDeTextoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.descriçãoDeProblemasToolStripMenuItem,
-            this.préTesteSemRITToolStripMenuItem,
-            this.liberaçãoTesteUnitárioToolStripMenuItem,
-            this.liberaçãoTesteIngradoToolStripMenuItem,
-            this.liberaçãoDeTicketToolStripMenuItem,
-            this.rITDeQualidadeToolStripMenuItem,
-            this.modeloRAResumidoToolStripMenuItem,
-            this.reviewRealizadoToolStripMenuItem,
-            this.workShopToolStripMenuItem,
-            this.sprintDevToolStripMenuItem,
-            this.orientaçãoDoDesenvolvedorToolStripMenuItem});
+            this.tipoDeTextoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.descriçãoDeProblemasToolStripMenuItem, this.préTesteSemRITToolStripMenuItem, this.liberaçãoTesteUnitárioToolStripMenuItem, this.liberaçãoTesteIngradoToolStripMenuItem, this.liberaçãoDeTicketToolStripMenuItem, this.rITDeQualidadeToolStripMenuItem, this.modeloRAResumidoToolStripMenuItem, this.reviewRealizadoToolStripMenuItem, this.workShopToolStripMenuItem, this.sprintDevToolStripMenuItem, this.orientaçãoDoDesenvolvedorToolStripMenuItem });
             this.tipoDeTextoToolStripMenuItem.Name = "tipoDeTextoToolStripMenuItem";
             this.tipoDeTextoToolStripMenuItem.ShortcutKeyDisplayString = "T";
             this.tipoDeTextoToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
@@ -367,8 +348,7 @@
             // 
             // ajudaToolStripMenuItem
             // 
-            this.ajudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sobreToolStripMenuItem});
+            this.ajudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.sobreToolStripMenuItem });
             this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
             this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.ajudaToolStripMenuItem.Text = "Ajuda";
@@ -383,20 +363,16 @@
             // 
             // opçõesToolStripMenuItem
             // 
-            this.opçõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.alterarLayoutToolStripMenuItem,
-            this.configuraçãoToolStripMenuItem});
+            this.opçõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.alterarLayoutToolStripMenuItem });
             this.opçõesToolStripMenuItem.Name = "opçõesToolStripMenuItem";
-            this.opçõesToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.opçõesToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.opçõesToolStripMenuItem.Text = "Opções";
             // 
             // alterarLayoutToolStripMenuItem
             // 
-            this.alterarLayoutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.blackToolStripMenuItem,
-            this.blackToolStripMenuItem1});
+            this.alterarLayoutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.blackToolStripMenuItem, this.blackToolStripMenuItem1 });
             this.alterarLayoutToolStripMenuItem.Name = "alterarLayoutToolStripMenuItem";
-            this.alterarLayoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.alterarLayoutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.alterarLayoutToolStripMenuItem.Text = "Alterar Layout";
             // 
             // blackToolStripMenuItem
@@ -451,9 +427,7 @@
             this.cbArquitetura.BackColor = System.Drawing.SystemColors.MenuText;
             this.cbArquitetura.ForeColor = System.Drawing.SystemColors.Window;
             this.cbArquitetura.FormattingEnabled = true;
-            this.cbArquitetura.Items.AddRange(new object[] {
-            "32 bits",
-            "64 bits"});
+            this.cbArquitetura.Items.AddRange(new object[] { "32 bits", "64 bits" });
             this.cbArquitetura.Location = new System.Drawing.Point(724, 48);
             this.cbArquitetura.Name = "cbArquitetura";
             this.cbArquitetura.Size = new System.Drawing.Size(109, 21);
@@ -474,18 +448,7 @@
             this.cbResolucao.BackColor = System.Drawing.SystemColors.MenuText;
             this.cbResolucao.ForeColor = System.Drawing.SystemColors.Window;
             this.cbResolucao.FormattingEnabled = true;
-            this.cbResolucao.Items.AddRange(new object[] {
-            "640 x 480",
-            "720 x 480",
-            "800 x 600",
-            "1024 x 768",
-            "1280 x 720",
-            "1366 x 768",
-            "1440 x 900",
-            "1600 x 900",
-            "1920 x 1080",
-            "2560 x 1080",
-            "2560 x 1440"});
+            this.cbResolucao.Items.AddRange(new object[] { "640 x 480", "720 x 480", "800 x 600", "1024 x 768", "1280 x 720", "1366 x 768", "1440 x 900", "1600 x 900", "1920 x 1080", "2560 x 1080", "2560 x 1440" });
             this.cbResolucao.Location = new System.Drawing.Point(724, 20);
             this.cbResolucao.Name = "cbResolucao";
             this.cbResolucao.Size = new System.Drawing.Size(109, 21);
@@ -506,24 +469,7 @@
             this.cbAplicacao.BackColor = System.Drawing.SystemColors.MenuText;
             this.cbAplicacao.ForeColor = System.Drawing.SystemColors.Window;
             this.cbAplicacao.FormattingEnabled = true;
-            this.cbAplicacao.Items.AddRange(new object[] {
-            "AIHU",
-            "AMBSUS",
-            "APAC",
-            "CENTRAL DE LEITOS",
-            "CIHA",
-            "CONF",
-            "GESTÃO DE DEMANDAS",
-            "GESTÃO DE DEMANDAS FACR",
-            "INTEGRAHD",
-            "IPE",
-            "NOTAS FISCAIS",
-            "PAINEL CIRURGICO",
-            "PRESCRIÇÃO",
-            "SIGCLIN",
-            "SIGH",
-            "SIGHPLUS",
-            "UTIL"});
+            this.cbAplicacao.Items.AddRange(new object[] { "AIHU", "AMBSUS", "APAC", "CENTRAL DE LEITOS", "CIHA", "CONF", "GESTÃO DE DEMANDAS", "GESTÃO DE DEMANDAS FACR", "INTEGRAHD", "IPE", "NOTAS FISCAIS", "PAINEL CIRURGICO", "PRESCRIÇÃO", "SIGCLIN", "SIGH", "SIGHPLUS", "UTIL" });
             this.cbAplicacao.Location = new System.Drawing.Point(461, 21);
             this.cbAplicacao.Name = "cbAplicacao";
             this.cbAplicacao.Size = new System.Drawing.Size(109, 21);
@@ -535,16 +481,7 @@
             this.cbSO.BackColor = System.Drawing.SystemColors.MenuText;
             this.cbSO.ForeColor = System.Drawing.SystemColors.Window;
             this.cbSO.FormattingEnabled = true;
-            this.cbSO.Items.AddRange(new object[] {
-            "WINDOWS XP",
-            "WINDOWS 7",
-            "WINDOWS VISTA",
-            "WINDOWS 8",
-            "WINDOWS 8.1",
-            "WINDOWS 10",
-            "MAC OS X",
-            "LINUX",
-            "SOLARIS"});
+            this.cbSO.Items.AddRange(new object[] { "WINDOWS XP", "WINDOWS 7", "WINDOWS VISTA", "WINDOWS 8", "WINDOWS 8.1", "WINDOWS 10", "MAC OS X", "LINUX", "SOLARIS" });
             this.cbSO.Location = new System.Drawing.Point(247, 48);
             this.cbSO.Name = "cbSO";
             this.cbSO.Size = new System.Drawing.Size(121, 21);
@@ -556,25 +493,7 @@
             this.cbArea.BackColor = System.Drawing.SystemColors.MenuText;
             this.cbArea.ForeColor = System.Drawing.SystemColors.Window;
             this.cbArea.FormattingEnabled = true;
-            this.cbArea.Items.AddRange(new object[] {
-            "NÃO INFORMADO",
-            "ADMINISTRAÇÃO",
-            "AGENDAMENTO",
-            "ALMOXARIFADO",
-            "AMBULATÓRIO",
-            "COMPRAS",
-            "CENTRO CIRÚRGICO",
-            "CONTABILIDADE",
-            "DIAGNOSE TERAPIA",
-            "ENFERMAGEM",
-            "FARMÁCIA",
-            "FATURAMENTO",
-            "FINANCEIRO",
-            "GESTÃO DE PENDÊNCIAS",
-            "HOTELARIA",
-            "INTERNAÇÃO",
-            "NUTRIÇÃO",
-            "SAME"});
+            this.cbArea.Items.AddRange(new object[] { "NÃO INFORMADO", "ADMINISTRAÇÃO", "AGENDAMENTO", "ALMOXARIFADO", "AMBULATÓRIO", "COMPRAS", "CENTRO CIRÚRGICO", "CONTABILIDADE", "DIAGNOSE TERAPIA", "ENFERMAGEM", "FARMÁCIA", "FATURAMENTO", "FINANCEIRO", "GESTÃO DE PENDÊNCIAS", "HOTELARIA", "INTERNAÇÃO", "NUTRIÇÃO", "SAME" });
             this.cbArea.Location = new System.Drawing.Point(55, 48);
             this.cbArea.Name = "cbArea";
             this.cbArea.Size = new System.Drawing.Size(121, 21);
@@ -1022,9 +941,7 @@
             this.cbAdmSistema.BackColor = System.Drawing.SystemColors.MenuText;
             this.cbAdmSistema.ForeColor = System.Drawing.SystemColors.Window;
             this.cbAdmSistema.FormattingEnabled = true;
-            this.cbAdmSistema.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
+            this.cbAdmSistema.Items.AddRange(new object[] { "SIM", "NÃO" });
             this.cbAdmSistema.Location = new System.Drawing.Point(705, 76);
             this.cbAdmSistema.Name = "cbAdmSistema";
             this.cbAdmSistema.Size = new System.Drawing.Size(48, 21);
@@ -1045,9 +962,7 @@
             this.cbTipoUser.BackColor = System.Drawing.SystemColors.MenuText;
             this.cbTipoUser.ForeColor = System.Drawing.SystemColors.Window;
             this.cbTipoUser.FormattingEnabled = true;
-            this.cbTipoUser.Items.AddRange(new object[] {
-            "FUNCIONÁRIO",
-            "PRESTADOR"});
+            this.cbTipoUser.Items.AddRange(new object[] { "FUNCIONÁRIO", "PRESTADOR" });
             this.cbTipoUser.Location = new System.Drawing.Point(427, 78);
             this.cbTipoUser.Name = "cbTipoUser";
             this.cbTipoUser.Size = new System.Drawing.Size(106, 21);
@@ -1068,9 +983,7 @@
             this.cbOcorreSN.BackColor = System.Drawing.SystemColors.MenuText;
             this.cbOcorreSN.ForeColor = System.Drawing.SystemColors.Window;
             this.cbOcorreSN.FormattingEnabled = true;
-            this.cbOcorreSN.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
+            this.cbOcorreSN.Items.AddRange(new object[] { "SIM", "NÃO" });
             this.cbOcorreSN.Location = new System.Drawing.Point(246, 77);
             this.cbOcorreSN.Name = "cbOcorreSN";
             this.cbOcorreSN.Size = new System.Drawing.Size(48, 21);
@@ -1326,37 +1239,7 @@
             this.cbBateriaTesteRIT.BackColor = System.Drawing.SystemColors.MenuText;
             this.cbBateriaTesteRIT.ForeColor = System.Drawing.SystemColors.Window;
             this.cbBateriaTesteRIT.FormattingEnabled = true;
-            this.cbBateriaTesteRIT.Items.AddRange(new object[] {
-            "1ª",
-            "2ª",
-            "3ª",
-            "4ª",
-            "5ª",
-            "6ª",
-            "7ª",
-            "8ª",
-            "9ª",
-            "10ª",
-            "11ª",
-            "12ª",
-            "13ª",
-            "14ª",
-            "15ª",
-            "16ª",
-            "17ª",
-            "18ª",
-            "19ª",
-            "20ª",
-            "21ª",
-            "22ª",
-            "23ª",
-            "24ª",
-            "25ª",
-            "26ª",
-            "27ª",
-            "28ª",
-            "29ª",
-            "30ª"});
+            this.cbBateriaTesteRIT.Items.AddRange(new object[] { "1ª", "2ª", "3ª", "4ª", "5ª", "6ª", "7ª", "8ª", "9ª", "10ª", "11ª", "12ª", "13ª", "14ª", "15ª", "16ª", "17ª", "18ª", "19ª", "20ª", "21ª", "22ª", "23ª", "24ª", "25ª", "26ª", "27ª", "28ª", "29ª", "30ª" });
             this.cbBateriaTesteRIT.Location = new System.Drawing.Point(523, 42);
             this.cbBateriaTesteRIT.Name = "cbBateriaTesteRIT";
             this.cbBateriaTesteRIT.Size = new System.Drawing.Size(48, 21);
@@ -2322,21 +2205,6 @@
             this.btCopiar.UseVisualStyleBackColor = true;
             this.btCopiar.Click += new System.EventHandler(this.btCopiar_Click);
             // 
-            // configuraçãoToolStripMenuItem
-            // 
-            this.configuraçãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.servidorToolStripMenuItem});
-            this.configuraçãoToolStripMenuItem.Name = "configuraçãoToolStripMenuItem";
-            this.configuraçãoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.configuraçãoToolStripMenuItem.Text = "Configuração";
-            // 
-            // servidorToolStripMenuItem
-            // 
-            this.servidorToolStripMenuItem.Name = "servidorToolStripMenuItem";
-            this.servidorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.servidorToolStripMenuItem.Text = "Servidor";
-            this.servidorToolStripMenuItem.Click += new System.EventHandler(this.servidorToolStripMenuItem_Click);
-            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2383,7 +2251,6 @@
             this.tbRITPreteste.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
@@ -2573,8 +2440,6 @@
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.TextBox tbGeraAIH;
         private System.Windows.Forms.Button btnGeraAIH;
-        private System.Windows.Forms.ToolStripMenuItem configuraçãoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem servidorToolStripMenuItem;
     }
 }
 
