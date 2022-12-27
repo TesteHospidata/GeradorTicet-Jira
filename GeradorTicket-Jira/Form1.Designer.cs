@@ -214,6 +214,8 @@
             this.label30 = new System.Windows.Forms.Label();
             this.btNovo = new System.Windows.Forms.Button();
             this.btCopiar = new System.Windows.Forms.Button();
+            this.cbMultiEmpresa = new System.Windows.Forms.CheckBox();
+            this.textMultiEmpresa = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.gbIdentificacao.SuspendLayout();
@@ -365,14 +367,14 @@
             // 
             this.opçõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.alterarLayoutToolStripMenuItem });
             this.opçõesToolStripMenuItem.Name = "opçõesToolStripMenuItem";
-            this.opçõesToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.opçõesToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.opçõesToolStripMenuItem.Text = "Opções";
             // 
             // alterarLayoutToolStripMenuItem
             // 
             this.alterarLayoutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.blackToolStripMenuItem, this.blackToolStripMenuItem1 });
             this.alterarLayoutToolStripMenuItem.Name = "alterarLayoutToolStripMenuItem";
-            this.alterarLayoutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.alterarLayoutToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.alterarLayoutToolStripMenuItem.Text = "Alterar Layout";
             // 
             // blackToolStripMenuItem
@@ -397,6 +399,8 @@
             // 
             // gbIdentificacao
             // 
+            this.gbIdentificacao.Controls.Add(this.textMultiEmpresa);
+            this.gbIdentificacao.Controls.Add(this.cbMultiEmpresa);
             this.gbIdentificacao.Controls.Add(this.cbArquitetura);
             this.gbIdentificacao.Controls.Add(this.label45);
             this.gbIdentificacao.Controls.Add(this.cbResolucao);
@@ -471,7 +475,7 @@
             this.cbAplicacao.ForeColor = System.Drawing.SystemColors.Window;
             this.cbAplicacao.FormattingEnabled = true;
             this.cbAplicacao.Items.AddRange(new object[] { "AIHU", "AMBSUS", "APAC", "CENTRAL DE LEITOS", "CIHA", "CONF", "GESTÃO DE DEMANDAS", "GESTÃO DE DEMANDAS FACR", "INTEGRAHD", "IPE", "NOTAS FISCAIS", "PAINEL CIRURGICO", "PRESCRIÇÃO", "SIGCLIN", "SIGH", "SIGHPLUS", "UTIL" });
-            this.cbAplicacao.Location = new System.Drawing.Point(461, 21);
+            this.cbAplicacao.Location = new System.Drawing.Point(315, 20);
             this.cbAplicacao.Name = "cbAplicacao";
             this.cbAplicacao.Size = new System.Drawing.Size(109, 21);
             this.cbAplicacao.TabIndex = 4;
@@ -505,7 +509,7 @@
             // 
             this.tbVersao.BackColor = System.Drawing.SystemColors.MenuText;
             this.tbVersao.ForeColor = System.Drawing.SystemColors.Window;
-            this.tbVersao.Location = new System.Drawing.Point(247, 21);
+            this.tbVersao.Location = new System.Drawing.Point(173, 21);
             this.tbVersao.Name = "tbVersao";
             this.tbVersao.Size = new System.Drawing.Size(52, 20);
             this.tbVersao.TabIndex = 2;
@@ -555,7 +559,7 @@
             // lblAplicacao
             // 
             this.lblAplicacao.AutoSize = true;
-            this.lblAplicacao.Location = new System.Drawing.Point(393, 26);
+            this.lblAplicacao.Location = new System.Drawing.Point(247, 25);
             this.lblAplicacao.Name = "lblAplicacao";
             this.lblAplicacao.Size = new System.Drawing.Size(54, 13);
             this.lblAplicacao.TabIndex = 4;
@@ -573,7 +577,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(192, 26);
+            this.label2.Location = new System.Drawing.Point(118, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 2;
@@ -2206,6 +2210,30 @@
             this.btCopiar.UseVisualStyleBackColor = true;
             this.btCopiar.Click += new System.EventHandler(this.btCopiar_Click);
             // 
+            // cbMultiEmpresa
+            // 
+            this.cbMultiEmpresa.AutoSize = true;
+            this.cbMultiEmpresa.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cbMultiEmpresa.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cbMultiEmpresa.Location = new System.Drawing.Point(440, 24);
+            this.cbMultiEmpresa.Name = "cbMultiEmpresa";
+            this.cbMultiEmpresa.Size = new System.Drawing.Size(74, 17);
+            this.cbMultiEmpresa.TabIndex = 11;
+            this.cbMultiEmpresa.Text = "Instituicao";
+            this.cbMultiEmpresa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cbMultiEmpresa.UseVisualStyleBackColor = true;
+            // 
+            // textMultiEmpresa
+            // 
+            this.textMultiEmpresa.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.textMultiEmpresa.Enabled = false;
+            this.textMultiEmpresa.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.textMultiEmpresa.Location = new System.Drawing.Point(520, 21);
+            this.textMultiEmpresa.Name = "textMultiEmpresa";
+            this.textMultiEmpresa.Size = new System.Drawing.Size(118, 20);
+            this.textMultiEmpresa.TabIndex = 12;
+            this.textMultiEmpresa.Text = "Instituição";
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2253,6 +2281,10 @@
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.TextBox textMultiEmpresa;
+
+        private System.Windows.Forms.CheckBox cbMultiEmpresa;
 
         #endregion
 
