@@ -53,6 +53,8 @@
             this.blackToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gbIdentificacao = new System.Windows.Forms.GroupBox();
+            this.textMultiEmpresa = new System.Windows.Forms.TextBox();
+            this.cbMultiEmpresa = new System.Windows.Forms.CheckBox();
             this.cbArquitetura = new System.Windows.Forms.ComboBox();
             this.label45 = new System.Windows.Forms.Label();
             this.cbResolucao = new System.Windows.Forms.ComboBox();
@@ -365,14 +367,14 @@
             // 
             this.opçõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.alterarLayoutToolStripMenuItem });
             this.opçõesToolStripMenuItem.Name = "opçõesToolStripMenuItem";
-            this.opçõesToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.opçõesToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.opçõesToolStripMenuItem.Text = "Opções";
             // 
             // alterarLayoutToolStripMenuItem
             // 
             this.alterarLayoutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.blackToolStripMenuItem, this.blackToolStripMenuItem1 });
             this.alterarLayoutToolStripMenuItem.Name = "alterarLayoutToolStripMenuItem";
-            this.alterarLayoutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.alterarLayoutToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.alterarLayoutToolStripMenuItem.Text = "Alterar Layout";
             // 
             // blackToolStripMenuItem
@@ -397,6 +399,8 @@
             // 
             // gbIdentificacao
             // 
+            this.gbIdentificacao.Controls.Add(this.textMultiEmpresa);
+            this.gbIdentificacao.Controls.Add(this.cbMultiEmpresa);
             this.gbIdentificacao.Controls.Add(this.cbArquitetura);
             this.gbIdentificacao.Controls.Add(this.label45);
             this.gbIdentificacao.Controls.Add(this.cbResolucao);
@@ -421,6 +425,31 @@
             this.gbIdentificacao.TabIndex = 0;
             this.gbIdentificacao.TabStop = false;
             this.gbIdentificacao.Text = "Identificação";
+            // 
+            // textMultiEmpresa
+            // 
+            this.textMultiEmpresa.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.textMultiEmpresa.Enabled = false;
+            this.textMultiEmpresa.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.textMultiEmpresa.Location = new System.Drawing.Point(520, 21);
+            this.textMultiEmpresa.Name = "textMultiEmpresa";
+            this.textMultiEmpresa.Size = new System.Drawing.Size(118, 20);
+            this.textMultiEmpresa.TabIndex = 12;
+            this.textMultiEmpresa.Text = "Instituição";
+            // 
+            // cbMultiEmpresa
+            // 
+            this.cbMultiEmpresa.AutoSize = true;
+            this.cbMultiEmpresa.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cbMultiEmpresa.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cbMultiEmpresa.Location = new System.Drawing.Point(440, 24);
+            this.cbMultiEmpresa.Name = "cbMultiEmpresa";
+            this.cbMultiEmpresa.Size = new System.Drawing.Size(74, 17);
+            this.cbMultiEmpresa.TabIndex = 11;
+            this.cbMultiEmpresa.Text = "Instituicao";
+            this.cbMultiEmpresa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cbMultiEmpresa.UseVisualStyleBackColor = true;
+            this.cbMultiEmpresa.CheckedChanged += new System.EventHandler(this.cbMultiEmpresa_CheckedChanged);
             // 
             // cbArquitetura
             // 
@@ -449,7 +478,7 @@
             this.cbResolucao.ForeColor = System.Drawing.SystemColors.Window;
             this.cbResolucao.FormattingEnabled = true;
             this.cbResolucao.Items.AddRange(new object[] { "640 x 480", "720 x 480", "800 x 600", "1024 x 768", "1280 x 720", "1366 x 768", "1440 x 900", "1600 x 900", "1920 x 1080", "2560 x 1080", "2560 x 1440" });
-            this.cbResolucao.Location = new System.Drawing.Point(1086, 31);
+            this.cbResolucao.Location = new System.Drawing.Point(721, 21);
             this.cbResolucao.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbResolucao.Name = "cbResolucao";
             this.cbResolucao.Size = new System.Drawing.Size(109, 21);
@@ -471,7 +500,7 @@
             this.cbAplicacao.ForeColor = System.Drawing.SystemColors.Window;
             this.cbAplicacao.FormattingEnabled = true;
             this.cbAplicacao.Items.AddRange(new object[] { "AIHU", "AMBSUS", "APAC", "CENTRAL DE LEITOS", "CIHA", "CONF", "GESTÃO DE DEMANDAS", "GESTÃO DE DEMANDAS FACR", "INTEGRAHD", "IPE", "NOTAS FISCAIS", "PAINEL CIRURGICO", "PRESCRIÇÃO", "SIGCLIN", "SIGH", "SIGHPLUS", "UTIL" });
-            this.cbAplicacao.Location = new System.Drawing.Point(461, 21);
+            this.cbAplicacao.Location = new System.Drawing.Point(315, 20);
             this.cbAplicacao.Name = "cbAplicacao";
             this.cbAplicacao.Size = new System.Drawing.Size(109, 21);
             this.cbAplicacao.TabIndex = 4;
@@ -505,7 +534,7 @@
             // 
             this.tbVersao.BackColor = System.Drawing.SystemColors.MenuText;
             this.tbVersao.ForeColor = System.Drawing.SystemColors.Window;
-            this.tbVersao.Location = new System.Drawing.Point(247, 21);
+            this.tbVersao.Location = new System.Drawing.Point(173, 21);
             this.tbVersao.Name = "tbVersao";
             this.tbVersao.Size = new System.Drawing.Size(52, 20);
             this.tbVersao.TabIndex = 2;
@@ -555,7 +584,7 @@
             // lblAplicacao
             // 
             this.lblAplicacao.AutoSize = true;
-            this.lblAplicacao.Location = new System.Drawing.Point(393, 26);
+            this.lblAplicacao.Location = new System.Drawing.Point(247, 25);
             this.lblAplicacao.Name = "lblAplicacao";
             this.lblAplicacao.Size = new System.Drawing.Size(54, 13);
             this.lblAplicacao.TabIndex = 4;
@@ -573,7 +602,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(192, 26);
+            this.label2.Location = new System.Drawing.Point(118, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 2;
@@ -2253,6 +2282,10 @@
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.TextBox textMultiEmpresa;
+
+        private System.Windows.Forms.CheckBox cbMultiEmpresa;
 
         #endregion
 
