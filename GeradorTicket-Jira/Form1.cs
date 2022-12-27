@@ -35,6 +35,11 @@ namespace GeradorTicket_Jira
         {
            copiaPorAba();
         }
+     
+        private void copiarF11ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           copiaPorAba();
+        }
 
         private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -45,10 +50,6 @@ namespace GeradorTicket_Jira
                 "\nCaso identifique problemas, tenha dúvidas ou deseje sugerir melhorias, favor contactar-me no e-mail dione@quevedo.adm.br", "Sobre!                     (versão: 2.1.1)", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void copiarF11ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-           copiaPorAba();
-        }
 
         private void copiaPorAba()
         {
