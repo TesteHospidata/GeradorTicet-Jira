@@ -182,7 +182,15 @@ namespace GeradorTicket_Jira
                                         + tbUsuarioRIT.Text
                                         + "{color}* - Senha: *{color:#0747A6}"
                                         + tbSenhaRIT.Text
-                                        + "{color}* \n{code:java}\n*** COLAR O DBCONF ***\n{code}\n{panel}"
+                                        + "{color}* \n{code:java}\n \n[HOSTNAME]"
+                                        + "\nhostname=" + tbHostname.Text
+                                        + "\n[DATABASE]"
+                                        + "\ndatabase=" + tbDatabase.Text
+                                        + "\n[PORTA]"
+                                        + "\nporta=" + tbPorta.Text
+                                        + "\n[USUARIO]"
+                                        + "\nusername=" + tbUsuario.Text
+                                        + "\n{code}\n \n{panel}"
                                         //  Informações do usuário
                                         + "{panel:title=*CARACTERÍSTICAS DO USUÁRIO SE PRECISAR:*|borderStyle=solid|borderColor=#1c1c1c|titleBGColor=#607B8B|bgColor=#C6E2FF|titleColor=white}"
                                         + "\nOcorre para todos os usuários ? *{"
