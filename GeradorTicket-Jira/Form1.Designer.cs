@@ -478,7 +478,7 @@
             this.cbResolucao.ForeColor = System.Drawing.SystemColors.Window;
             this.cbResolucao.FormattingEnabled = true;
             this.cbResolucao.Items.AddRange(new object[] { "640 x 480", "720 x 480", "800 x 600", "1024 x 768", "1280 x 720", "1366 x 768", "1440 x 900", "1600 x 900", "1920 x 1080", "2560 x 1080", "2560 x 1440" });
-            this.cbResolucao.Location = new System.Drawing.Point(1086, 31);
+            this.cbResolucao.Location = new System.Drawing.Point(721, 21);
             this.cbResolucao.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbResolucao.Name = "cbResolucao";
             this.cbResolucao.Size = new System.Drawing.Size(109, 21);
