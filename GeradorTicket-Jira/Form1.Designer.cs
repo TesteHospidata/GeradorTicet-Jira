@@ -53,6 +53,8 @@
             this.blackToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gbIdentificacao = new System.Windows.Forms.GroupBox();
+            this.textMultiEmpresa = new System.Windows.Forms.TextBox();
+            this.cbMultiEmpresa = new System.Windows.Forms.CheckBox();
             this.cbArquitetura = new System.Windows.Forms.ComboBox();
             this.label45 = new System.Windows.Forms.Label();
             this.cbResolucao = new System.Windows.Forms.ComboBox();
@@ -214,8 +216,6 @@
             this.label30 = new System.Windows.Forms.Label();
             this.btNovo = new System.Windows.Forms.Button();
             this.btCopiar = new System.Windows.Forms.Button();
-            this.cbMultiEmpresa = new System.Windows.Forms.CheckBox();
-            this.textMultiEmpresa = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.gbIdentificacao.SuspendLayout();
@@ -425,6 +425,31 @@
             this.gbIdentificacao.TabIndex = 0;
             this.gbIdentificacao.TabStop = false;
             this.gbIdentificacao.Text = "Identificação";
+            // 
+            // textMultiEmpresa
+            // 
+            this.textMultiEmpresa.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.textMultiEmpresa.Enabled = false;
+            this.textMultiEmpresa.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.textMultiEmpresa.Location = new System.Drawing.Point(520, 21);
+            this.textMultiEmpresa.Name = "textMultiEmpresa";
+            this.textMultiEmpresa.Size = new System.Drawing.Size(118, 20);
+            this.textMultiEmpresa.TabIndex = 12;
+            this.textMultiEmpresa.Text = "Instituição";
+            // 
+            // cbMultiEmpresa
+            // 
+            this.cbMultiEmpresa.AutoSize = true;
+            this.cbMultiEmpresa.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cbMultiEmpresa.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cbMultiEmpresa.Location = new System.Drawing.Point(440, 24);
+            this.cbMultiEmpresa.Name = "cbMultiEmpresa";
+            this.cbMultiEmpresa.Size = new System.Drawing.Size(74, 17);
+            this.cbMultiEmpresa.TabIndex = 11;
+            this.cbMultiEmpresa.Text = "Instituicao";
+            this.cbMultiEmpresa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cbMultiEmpresa.UseVisualStyleBackColor = true;
+            this.cbMultiEmpresa.CheckedChanged += new System.EventHandler(this.cbMultiEmpresa_CheckedChanged);
             // 
             // cbArquitetura
             // 
@@ -2209,30 +2234,6 @@
             this.btCopiar.Text = "Copiar Memo";
             this.btCopiar.UseVisualStyleBackColor = true;
             this.btCopiar.Click += new System.EventHandler(this.btCopiar_Click);
-            // 
-            // cbMultiEmpresa
-            // 
-            this.cbMultiEmpresa.AutoSize = true;
-            this.cbMultiEmpresa.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cbMultiEmpresa.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cbMultiEmpresa.Location = new System.Drawing.Point(440, 24);
-            this.cbMultiEmpresa.Name = "cbMultiEmpresa";
-            this.cbMultiEmpresa.Size = new System.Drawing.Size(74, 17);
-            this.cbMultiEmpresa.TabIndex = 11;
-            this.cbMultiEmpresa.Text = "Instituicao";
-            this.cbMultiEmpresa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cbMultiEmpresa.UseVisualStyleBackColor = true;
-            // 
-            // textMultiEmpresa
-            // 
-            this.textMultiEmpresa.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.textMultiEmpresa.Enabled = false;
-            this.textMultiEmpresa.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textMultiEmpresa.Location = new System.Drawing.Point(520, 21);
-            this.textMultiEmpresa.Name = "textMultiEmpresa";
-            this.textMultiEmpresa.Size = new System.Drawing.Size(118, 20);
-            this.textMultiEmpresa.TabIndex = 12;
-            this.textMultiEmpresa.Text = "Instituição";
             // 
             // FormPrincipal
             // 

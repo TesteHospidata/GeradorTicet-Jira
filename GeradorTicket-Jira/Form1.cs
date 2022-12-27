@@ -838,5 +838,16 @@ namespace GeradorTicket_Jira
             Clipboard.SetText(tbGeraCelular.Text);
         }
 
+        private void cbMultiEmpresa_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbMultiEmpresa.Checked)
+            {
+                textMultiEmpresa.Enabled = true;
+            }
+            else
+            {
+                textMultiEmpresa.Enabled = false;
+            }
+        }
     }
 }
