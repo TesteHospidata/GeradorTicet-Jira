@@ -71,6 +71,8 @@ namespace GeradorTicket_Jira
                                         + tbPorta.Text
                                         + "\n*DATABASE:* "
                                         + tbDatabase.Text
+                                        + "\n*Multi empresa:* "
+                                        + checkMultiEmpresa()
                                         + "\n*USUÁRIO:* "
                                         + tbUsuario.Text
                                         + "\n*SENHA:* "
@@ -86,222 +88,226 @@ namespace GeradorTicket_Jira
             {
                 MessageBox.Show("desculpe os transtornos, porém esta funcionalidade ainda não foi implementada, aguarde novas liberações!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            else if (tbEscolhas.SelectedTab.Equals(rbTesteUnit))
-            {
-                tbCliente.ReadOnly = true;
+            else if (tbEscolhas.SelectedTab.Equals(tbTesteIntegrado))
+             {
+                 tbCliente.ReadOnly = true;
 
 
-                string reproduzido = "{panel:title=*TESTE UNITÁRIO REALIZADO PELO SETOR DE QUALIDADE*|borderStyle=solid|borderColor=#0000FF|titleBGColor=#EE7600|bgColor=#ee7600}"
-                                        + "\n*Testes Realizados na Versão:* *{color:#0000FF}"
-                                        + tbVersao.Text
-                                        + "{color}* *Local Testado:* *{color:#0000FF}"
-                                        + tbHostnameUnitario.Text
-                                        + " - "
-                                        + tbDatabaseUnitario.Text
-                                        + " - "
-                                        + tbPortaUnitario.Text
-                                        + "{color}* - *Usuário:* *{color:#0000FF}"
-                                        + tbUsuarioUnitario.Text
-                                        + "{color}* - *Senha:* *{color:#0000FF}"
-                                        + tbSenhaUnitario.Text
-                                        + "{color}* \n*Registro de Testes em:*\n*Observações:**{color:#0000FF} TICKET BLOQUEADO, AGUARDANDO TESTE DE INTEGRAÇÃO!{color}*"
-                                        + "{panel}";
+                 string reproduzido = "{panel:title=*TESTE INTEGRADO REALIZADO PELO SETOR DE QUALIDADE*|borderStyle=solid|borderColor=#0000FF|titleBGColor=#eec900|bgColor=#eec900}"
+                                      + "\n*Testes Realizados na Versão:* *{color:#0000FF}"
+                                      + tbVersao.Text
+                                      + "{color}* *Local Testado:* *{color:#0000FF}"
+                                      + tbHostnameIntegrado.Text
+                                      + " - "
+                                      + tbDatabaseIntegrado.Text
+                                      + " - "
+                                      + tbPortaIntegrado.Text
+                                      + "{color}* - *Usuário:* *{color:#0000FF}"
+                                      + tbUsuarioIntegrado.Text
+                                      + "{color}* - *Senha:* *{color:#0000FF}"
+                                      + tbSenhaIntegrado.Text
+                                      + "{color}* \n*Registro de Testes em:*\n*Observações:**{color:#0000FF} TICKET BLOQUEADO, AGUARDANDO HOMOLOGAÇÃO!{color}*"
+                                      + "{panel}";
+
+                 Clipboard.SetText(reproduzido);
+             }
+             else if (tbEscolhas.SelectedTab.Equals(rbTesteUnit))
+             {
+                 tbCliente.ReadOnly = true;
+
+
+                 string reproduzido = "{panel:title=*TESTE UNITÁRIO REALIZADO PELO SETOR DE QUALIDADE*|borderStyle=solid|borderColor=#0000FF|titleBGColor=#EE7600|bgColor=#ee7600}"
+                                      + "\n*Testes Realizados na Versão:* *{color:#0000FF}"
+                                      + tbVersao.Text
+                                      + "{color}* *Local Testado:* *{color:#0000FF}"
+                                      + tbHostnameUnitario.Text
+                                      + " - "
+                                      + tbDatabaseUnitario.Text
+                                      + " - "
+                                      + tbPortaUnitario.Text
+                                      + "{color}* - *Usuário:* *{color:#0000FF}"
+                                      + tbUsuarioUnitario.Text
+                                      + "{color}* - *Senha:* *{color:#0000FF}"
+                                      + tbSenhaUnitario.Text
+                                      + "{color}* \n*Registro de Testes em:*\n*Observações:**{color:#0000FF} TICKET BLOQUEADO, AGUARDANDO TESTE DE INTEGRAÇÃO!{color}*"
+                                      + "{panel}";
   
 
 
-                Clipboard.SetText(reproduzido);
-            }
-            else if (tbEscolhas.SelectedTab.Equals(tbTesteIntegrado))
-            {
-                tbCliente.ReadOnly = true;
+                 Clipboard.SetText(reproduzido);
+             }
+             else if (tbEscolhas.SelectedTab.Equals(tbLiberacaoTeste))
+             {
+                 tbCliente.ReadOnly = true;
 
 
-                string reproduzido = "{panel:title=*TESTE INTEGRADO REALIZADO PELO SETOR DE QUALIDADE*|borderStyle=solid|borderColor=#0000FF|titleBGColor=#eec900|bgColor=#eec900}"
-                                        + "\n*Testes Realizados na Versão:* *{color:#0000FF}"
-                                        + tbVersao.Text
-                                        + "{color}* *Local Testado:* *{color:#0000FF}"
-                                        + tbHostnameIntegrado.Text
-                                        + " - "
-                                        + tbDatabaseIntegrado.Text
-                                        + " - "
-                                        + tbPortaIntegrado.Text
-                                        + "{color}* - *Usuário:* *{color:#0000FF}"
-                                        + tbUsuarioIntegrado.Text
-                                        + "{color}* - *Senha:* *{color:#0000FF}"
-                                        + tbSenhaIntegrado.Text
-                                        + "{color}* \n*Registro de Testes em:*\n*Observações:**{color:#0000FF} TICKET BLOQUEADO, AGUARDANDO HOMOLOGAÇÃO!{color}*"
-                                        + "{panel}";
+                 string reproduzido = "{panel:title=*TESTES REALIZADOS PELO SETOR DE QUALIDADE*|borderStyle=solid|borderColor=#43cd80|titleBGColor=#9AFF9A|bgColor=#43cd80}"
+                                      + "\n*SOLICITAÇÃO ATENDIDA*"
+                                      + "\n *Testes Realizados na Versão:* *{color: red}"
+                                      + tbVersao.Text
+                                      + "{color} de {color: red}"
+                                      + dtDataLiberacao.Text
+                                      + "{color} às {color: red}"  
+                                      + dtHoraLiberacao.Text
+                                      + "{color}*"
+                                      + " \n*Local Testado:* *{color: blue}"
+                                      + tbHostnameLiberacao.Text
+                                      + " - "
+                                      + tbDatabaseLiberacao.Text
+                                      + " - "
+                                      + tbPortaLiberacao.Text
+                                      + " - "
+                                      + "{color} Multiempresa:* {color:blue}*[" 
+                                      + checkMultiEmpresa()
+                                      + "]{color}"
+                                      + "{color}* - *Usuário:* *{color:blue}"
+                                      + tbUsuarioLiberacao.Text
+                                      + "{color}* - *Senha:* *{color:blue}"
+                                      + tbSenhaLiberacao.Text
+                                      + "{color}*\n*Ambiente:* *{color:blue}"
+                                      + cbSO.Text
+                                      + " - "
+                                      + cbArquitetura.Text
+                                      + "{color}* - *Resolução:* {color:blue} *"
+                                      + cbResolucao.Text
+                                      + "*{color}"
+                                      + "\nh3. *Registro de Testes em:*"
+                                      + "\n*{color: red} ... {color}*"
+                                      + "\nh3. *Observações:* \n{color: red}*"
+                                      + tbObsLiberacao.Text
+                                      + "*{color}"
+                                      + "\n{panel}";
 
-                Clipboard.SetText(reproduzido);
-            }
-            else if (tbEscolhas.SelectedTab.Equals(tbLiberacaoTeste))
-            {
-                tbCliente.ReadOnly = true;
+                 Clipboard.SetText(reproduzido);
+             }
+             else if (tbEscolhas.SelectedTab.Equals(tbRITQualidade))
+             {
+                 //  Topo do Comentário
+                 string reproduzido = "{panel:title=*REGISTRO DE ANÁLISE DE QUALIDADE - "
+                                      + cbBateriaTesteRIT.Text
+                                      + " BATERIA DE TESTES*|borderStyle=solid|borderColor=#1c1c1c|titleBGColor=#607B8B|bgColor=#C6E2FF|titleColor=white}{panel}\n"
+                                      //  Identificação da versão e Ambiente
+                                      + "{panel:title=*TESTES REALIZADOS EM*|borderStyle=solid|borderColor=#1c1c1c|titleBGColor=#607B8B|bgColor=#C6E2FF|titleColor=white}\n"
+                                      + "h2.*Testes Realizados na Versão:* \nh3.*{color:#d04437}["
+                                      + tbVersao.Text
+                                      + "]{color}* *de* *{color:#d04437} ["
+                                      + dataVersaoRIT.Text
+                                      + "]{color}* *compilada às* *{color:#d04437} ["
+                                      + horaCompilacaoRIT.Text
+                                      + "]{color}*"
+                                      + "\nh2.*Ambiente:* \nh3.*{color:blue}["
+                                      + cbSO.Text
+                                      + " - "
+                                      + cbArquitetura.Text
+                                      + "]{color}* - *Resolução:* *{color:blue}["
+                                      + cbResolucao.Text + "]{color}*\n"
+                                      + "*Multiempresa:* *{color:blue}[" 
+                                      + checkMultiEmpresa()
+                                      + "]{color}* {panel}"
+                                      //  Identificação da base
+                                      + "{panel:title=*BASE ONDE O PROBLEMA FOI REPRODUZIDO - DBCONF:*|borderStyle=solid|borderColor=#1c1c1c|titleBGColor=#607B8B|bgColor=#C6E2FF|titleColor=white}"
+                                      + "h2.USUÁRIO: *{color:#0747A6}"
+                                      + tbUsuarioRIT.Text
+                                      + "{color}* - Senha: *{color:#0747A6}"
+                                      + tbSenhaRIT.Text
+                                      + "{color}* \n{code:java}\n \n[HOSTNAME]"
+                                      + "\nhostname=" + tbHostname.Text
+                                      + "\n[DATABASE]"
+                                      + "\ndatabase=" + tbDatabase.Text
+                                      + "\n[PORTA]"
+                                      + "\nporta=" + tbPorta.Text
+                                      + "\n[USUARIO]"
+                                      + "\nusername=" + tbUsuario.Text
+                                      + "\n \n{code}\n{panel}"
+                                      //  Informações do usuário
+                                      + "{panel:title=*CARACTERÍSTICAS DO USUÁRIO SE PRECISAR:*|borderStyle=solid|borderColor=#1c1c1c|titleBGColor=#607B8B|bgColor=#C6E2FF|titleColor=white}"
+                                      + "\nOcorre para todos os usuários ? *{"
+                                      + "color:#0747A6}"
+                                      + cbOcorreSN.Text
+                                      + "{color}*\nTipo de Usuário? *{color:#0747A6}"
+                                      + cbTipoUser.Text
+                                      + "{color}*\nADM no sistema?: *{color:#0747A6}" 
+                                      + cbAdmSistema.Text
+                                      + "{color}*"
+                                      + "{panel}";
+                 if (cbRIT01.Checked)
+                 {
+                     reproduzido = reproduzido
+                                   + "\n{panel:title=*RIT - "
+                                   + tbRIT01.Text
+                                   + "*|borderStyle=solid|borderColor=#1c1c1c|titleBGColor=#607B8B|bgColor=#C6E2FF|titleColor=white}"
+                                   + "h3. *DESCRIÇÃO:* \n*"
+                                   + textBoxRIT01.Text
+                                   + "* \n{panel}";
+                 }
 
+                 if (cbRIT02.Checked)
+                 {
+                     reproduzido = reproduzido
+                                   + "\n{panel:title=*RIT - "
+                                   + tbRIT02.Text
+                                   + "*|borderStyle=solid|borderColor=#1c1c1c|titleBGColor=#607B8B|bgColor=#C6E2FF|titleColor=white}"
+                                   + "h3. *DESCRIÇÃO:* \n*"
+                                   + textBoxRIT02.Text
+                                   + "* \n{panel}";
+                 }
 
-                string reproduzido = "{panel:title=*TESTES REALIZADOS PELO SETOR DE QUALIDADE*|borderStyle=solid|borderColor=#43cd80|titleBGColor=#9AFF9A|bgColor=#43cd80}"
-                                        + "\n*SOLICITAÇÃO ATENDIDA*"
-                                        + "\n *Testes Realizados na Versão:* *{color: red}"
-                                        + tbVersao.Text
-                                        + "{color} de {color: red}"
-                                        + dtDataLiberacao.Text
-                                        + "{color} às {color: red}"
-                                        + dtHoraLiberacao.Text
-                                        + "{color}*"
-                                        + " \n*Local Testado:* *{color: blue}"
-                                        + tbHostnameLiberacao.Text
-                                        + " - "
-                                        + tbDatabaseLiberacao.Text
-                                        + " - "
-                                        + tbPortaLiberacao.Text
-                                        + "{color}* - *Usuário:* *{color:blue}"
-                                        + tbUsuarioLiberacao.Text
-                                        + "{color}* - *Senha:* *{color:blue}"
-                                        + tbSenhaLiberacao.Text
-                                        + "{color}*\n*Ambiente:* *{color:blue}"
-                                        + cbSO.Text
-                                        + " - "
-                                        + cbArquitetura.Text
-                                        + "{color}* - *Resolução:* {color:blue} *"
-                                        + cbResolucao.Text
-                                        + "*{color}"
-                                        + "\nh3. *Registro de Testes em:*"
-                                        + "\n*{color: red} ... {color}*"
-                                        + "\nh3. *Observações:* \n{color: red}*"
-                                        + tbObsLiberacao.Text
-                                        + "*{color}"
-                                        + "\n{panel}";
+                 if (cbRIT03.Checked)
+                 {
+                     reproduzido = reproduzido
+                                   + "\n{panel:title=*RIT - "
+                                   + tbRIT03.Text
+                                   + "*|borderStyle=solid|borderColor=#1c1c1c|titleBGColor=#607B8B|bgColor=#C6E2FF|titleColor=white}"
+                                   + "h3. *DESCRIÇÃO:* \n*"
+                                   + textBoxRIT03.Text
+                                   + "* \n{panel}";
+                 }
 
-                Clipboard.SetText(reproduzido);
-            }
-            else if (tbEscolhas.SelectedTab.Equals(tbRITQualidade))
-            {
-                //  Topo do Comentário
-                string reproduzido = "{panel:title=*REGISTRO DE ANÁLISE DE QUALIDADE - "
-                                        + cbBateriaTesteRIT.Text
-                                        + " BATERIA DE TESTES*|borderStyle=solid|borderColor=#1c1c1c|titleBGColor=#607B8B|bgColor=#C6E2FF|titleColor=white}{panel}\n"
-                                        //  Identificação da versão e Ambiente
-                                        + "{panel:title=*TESTES REALIZADOS EM*|borderStyle=solid|borderColor=#1c1c1c|titleBGColor=#607B8B|bgColor=#C6E2FF|titleColor=white}\n"
-                                        + "h2.*Testes Realizados na Versão:* \nh3.*{color:#d04437}["
-                                        + tbVersao.Text
-                                        + "]{color}* *de* *{color:#d04437} ["
-                                        + dataVersaoRIT.Text
-                                        + "]{color}* *compilada às* *{color:#d04437} ["
-                                        + horaCompilacaoRIT.Text
-                                        + "]{color}*"
-                                        + "\nh2.*Ambiente:* \nh3.*{color:blue}["
-                                        + cbSO.Text
-                                        + " - "
-                                        + cbArquitetura.Text
-                                        + "]{color}* - *Resolução:* *{color:blue}["
-                                        + cbResolucao.Text + "]{color}*\n"
-                                        + "*Multiempresa:* *{color:blue}[" 
-                                        + checkMultiEmpresa()
-                                        + "]{color}* {panel}"
-                                        //  Identificação da base
-                                        + "{panel:title=*BASE ONDE O PROBLEMA FOI REPRODUZIDO - DBCONF:*|borderStyle=solid|borderColor=#1c1c1c|titleBGColor=#607B8B|bgColor=#C6E2FF|titleColor=white}"
-                                        + "h2.USUÁRIO: *{color:#0747A6}"
-                                        + tbUsuarioRIT.Text
-                                        + "{color}* - Senha: *{color:#0747A6}"
-                                        + tbSenhaRIT.Text
-                                        + "{color}* \n{code:java}\n \n[HOSTNAME]"
-                                        + "\nhostname=" + tbHostname.Text
-                                        + "\n[DATABASE]"
-                                        + "\ndatabase=" + tbDatabase.Text
-                                        + "\n[PORTA]"
-                                        + "\nporta=" + tbPorta.Text
-                                        + "\n[USUARIO]"
-                                        + "\nusername=" + tbUsuario.Text
-                                        + "\n \n{code}\n{panel}"
-                                        //  Informações do usuário
-                                        + "{panel:title=*CARACTERÍSTICAS DO USUÁRIO SE PRECISAR:*|borderStyle=solid|borderColor=#1c1c1c|titleBGColor=#607B8B|bgColor=#C6E2FF|titleColor=white}"
-                                        + "\nOcorre para todos os usuários ? *{"
-                                        + "color:#0747A6}"
-                                        + cbOcorreSN.Text
-                                        + "{color}*\nTipo de Usuário? *{color:#0747A6}"
-                                        + cbTipoUser.Text
-                                        + "{color}*\nADM no sistema?: *{color:#0747A6}" 
-                                        + cbAdmSistema.Text
-                                        + "{color}*"
-                                        + "{panel}";
-                if (cbRIT01.Checked)
-                {
-                    reproduzido = reproduzido
-                        + "\n{panel:title=*RIT - "
-                        + tbRIT01.Text
-                        + "*|borderStyle=solid|borderColor=#1c1c1c|titleBGColor=#607B8B|bgColor=#C6E2FF|titleColor=white}"
-                        + "h3. *DESCRIÇÃO:* \n*"
-                        + textBoxRIT01.Text
-                        + "* \n{panel}";
-                }
+                 if (cbRIT04.Checked)
+                 {
+                     reproduzido = reproduzido
+                                   + "\n{panel:title=*RIT - "
+                                   + tbRIT04.Text
+                                   + "*|borderStyle=solid|borderColor=#1c1c1c|titleBGColor=#607B8B|bgColor=#C6E2FF|titleColor=white}"
+                                   + "h3. *DESCRIÇÃO:* \n*"
+                                   + textBoxRIT04.Text
+                                   + "* \n{panel}";
+                 }
 
-                if (cbRIT02.Checked)
-                {
-                    reproduzido = reproduzido
-                        + "\n{panel:title=*RIT - "
-                        + tbRIT02.Text
-                        + "*|borderStyle=solid|borderColor=#1c1c1c|titleBGColor=#607B8B|bgColor=#C6E2FF|titleColor=white}"
-                        + "h3. *DESCRIÇÃO:* \n*"
-                        + textBoxRIT02.Text
-                        + "* \n{panel}";
-                }
+                 Clipboard.SetText(reproduzido);
+             }
+             else if (tbEscolhas.SelectedTab.Equals(tbRAResumido))
+             {
+                 string solicitacao = tbSolicitacaoCliente.Text;
+                 string justificativa = tbJustificativaCliente.Text;
+                 string requisitos = tbRequisitosImplementacao.Text;
+                 string resultado = tbResultadosEsperados.Text;
+                 string reproduzido = "{panel:title=*REGISTRO DE ANÁLISE - RA RESUMIDO*|borderStyle=solid|borderColor=#1c1c1c|titleBGColor=#8b3a62|bgColor=#fff0f5|titleColor=white}"
+                                      + "\n*RESUMO DA SOLICITAÇÃO DO CLIENTE:*\n"
+                                      + solicitacao
+                                      + "\n\n*JUSTIFICATIVA DA SOLICITAÇÃO DO CLIENTE:*\n"
+                                      + justificativa
+                                      + "\n\n*REQUISITOS PARA IMPLEMENTAÇÃO:*\n"
+                                      + requisitos
+                                      + "\n\n*RESULTADO:*\n"
+                                      + resultado
+                                      + "\n{panel}";
 
-                if (cbRIT03.Checked)
-                {
-                    reproduzido = reproduzido
-                        + "\n{panel:title=*RIT - "
-                        + tbRIT03.Text
-                        + "*|borderStyle=solid|borderColor=#1c1c1c|titleBGColor=#607B8B|bgColor=#C6E2FF|titleColor=white}"
-                        + "h3. *DESCRIÇÃO:* \n*"
-                        + textBoxRIT03.Text
-                        + "* \n{panel}";
-                }
+                 Clipboard.SetText(reproduzido);
+             }
+             else if (tbEscolhas.SelectedTab.Equals(tbGeraDoc))
+             {
+                 MessageBox.Show("desculpe os transtornos, porém esta funcionalidade ainda não foi implementada, aguarde novas liberações!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+             }
+             else if (tbEscolhas.SelectedTab.Equals(tbOrientacao))
+             {
+                 string orientacao = "{panel:title=INFORMAÇÕES DIVERSAS|borderStyle=solid|borderColor=#1c1c1c|titleBGColor=#2E8B57|bgColor=WHITE|titleColor=#c1c7d0}"
+                                     + "\nh3. *Descrição:* \n*"
+                                     + tbOrientacoes.Text
+                                     + "* \n{panel}";
 
-                if (cbRIT04.Checked)
-                {
-                    reproduzido = reproduzido
-                        + "\n{panel:title=*RIT - "
-                        + tbRIT04.Text
-                        + "*|borderStyle=solid|borderColor=#1c1c1c|titleBGColor=#607B8B|bgColor=#C6E2FF|titleColor=white}"
-                        + "h3. *DESCRIÇÃO:* \n*"
-                        + textBoxRIT04.Text
-                        + "* \n{panel}";
-                }
-
-                Clipboard.SetText(reproduzido);
-            }
-            else if (tbEscolhas.SelectedTab.Equals(tbRAResumido))
-            {
-                string solicitacao = tbSolicitacaoCliente.Text;
-                string justificativa = tbJustificativaCliente.Text;
-                string requisitos = tbRequisitosImplementacao.Text;
-                string resultado = tbResultadosEsperados.Text;
-                string reproduzido = "{panel:title=*REGISTRO DE ANÁLISE - RA RESUMIDO*|borderStyle=solid|borderColor=#1c1c1c|titleBGColor=#8b3a62|bgColor=#fff0f5|titleColor=white}"
-                + "\n*RESUMO DA SOLICITAÇÃO DO CLIENTE:*\n"
-                + solicitacao
-                + "\n\n*JUSTIFICATIVA DA SOLICITAÇÃO DO CLIENTE:*\n"
-                + justificativa
-                + "\n\n*REQUISITOS PARA IMPLEMENTAÇÃO:*\n"
-                + requisitos
-                + "\n\n*RESULTADO:*\n"
-                + resultado
-                + "\n{panel}";
-
-                Clipboard.SetText(reproduzido);
-            }
-            else if (tbEscolhas.SelectedTab.Equals(tbGeraDoc))
-            {
-                MessageBox.Show("desculpe os transtornos, porém esta funcionalidade ainda não foi implementada, aguarde novas liberações!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else if (tbEscolhas.SelectedTab.Equals(tbOrientacao))
-            {
-                string orientacao = "{panel:title=INFORMAÇÕES DIVERSAS|borderStyle=solid|borderColor=#1c1c1c|titleBGColor=#2E8B57|bgColor=WHITE|titleColor=#c1c7d0}"
-                + "\nh3. *Descrição:* \n*"
-                + tbOrientacoes.Text
-                + "* \n{panel}";
-
-                Clipboard.SetText(orientacao);
-            }
+                 Clipboard.SetText(orientacao);
+             }
         }
         
         private void limparF10ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -630,7 +636,7 @@ namespace GeradorTicket_Jira
 
         private String checkMultiEmpresa()
         {
-            return cbMultiEmpresa.Checked ? textMultiEmpresa.Text : "Não";
+            return cbMultiEmpresa.Checked ? textMultiEmpresa.Text.ToUpper() : "Não";
         }
     }
 }
