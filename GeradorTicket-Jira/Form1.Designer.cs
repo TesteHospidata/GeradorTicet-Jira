@@ -431,7 +431,7 @@
             this.textMultiEmpresa.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.textMultiEmpresa.Enabled = false;
             this.textMultiEmpresa.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textMultiEmpresa.Location = new System.Drawing.Point(520, 21);
+            this.textMultiEmpresa.Location = new System.Drawing.Point(532, 22);
             this.textMultiEmpresa.Name = "textMultiEmpresa";
             this.textMultiEmpresa.Size = new System.Drawing.Size(118, 20);
             this.textMultiEmpresa.TabIndex = 12;
@@ -442,11 +442,11 @@
             this.cbMultiEmpresa.AutoSize = true;
             this.cbMultiEmpresa.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cbMultiEmpresa.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cbMultiEmpresa.Location = new System.Drawing.Point(440, 24);
+            this.cbMultiEmpresa.Location = new System.Drawing.Point(430, 24);
             this.cbMultiEmpresa.Name = "cbMultiEmpresa";
-            this.cbMultiEmpresa.Size = new System.Drawing.Size(74, 17);
+            this.cbMultiEmpresa.Size = new System.Drawing.Size(94, 17);
             this.cbMultiEmpresa.TabIndex = 11;
-            this.cbMultiEmpresa.Text = "Instituicao";
+            this.cbMultiEmpresa.Text = "Multiempresa: ";
             this.cbMultiEmpresa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cbMultiEmpresa.UseVisualStyleBackColor = true;
             this.cbMultiEmpresa.CheckedChanged += new System.EventHandler(this.cbMultiEmpresa_CheckedChanged);
