@@ -74,7 +74,7 @@ namespace GeradorTicket_Jira
                                         + "\n*Multi empresa:* "
                                         + checkMultiEmpresa()
                                         + "\n*USUÁRIO:* "
-                                        + tbUsuario.Text
+                                        + tbUsuario.Text.ToUpper()
                                         + "\n*SENHA:* "
                                         + tbPassword.Text;
 
@@ -157,14 +157,14 @@ namespace GeradorTicket_Jira
                                       + " - "
                                       + tbPortaLiberacao.Text
                                       + " - "
-                                      + "{color} Multiempresa:* {color:blue}*[" 
+                                      + "{color} Multiempresa: {color:blue}[" 
                                       + checkMultiEmpresa()
                                       + "]{color}"
-                                      + "{color}* - *Usuário:* *{color:blue}"
-                                      + tbUsuarioLiberacao.Text
-                                      + "{color}* - *Senha:* *{color:blue}"
+                                      + "{color} - Usuário: {color:blue}"
+                                      + tbUsuarioLiberacao.Text.ToUpper()
+                                      + "{color} - Senha: {color:blue}"
                                       + tbSenhaLiberacao.Text
-                                      + "{color}*\n*Ambiente:* *{color:blue}"
+                                      + "{color}*\n*mbiente: {color:blue}"
                                       + cbSO.Text
                                       + " - "
                                       + cbArquitetura.Text
@@ -172,8 +172,8 @@ namespace GeradorTicket_Jira
                                       + cbResolucao.Text
                                       + "*{color}"
                                       + "\nh3. *Registro de Testes em:*"
-                                      + "\n*{color: red} ... {color}*"
-                                      + "\nh3. *Observações:* \n{color: red}*"
+                                      + "\n*{color: orange} ... {color}*"
+                                      + "\nh3. *Observações:* \n{color: black}*"
                                       + tbObsLiberacao.Text
                                       + "*{color}"
                                       + "\n{panel}";
@@ -211,13 +211,13 @@ namespace GeradorTicket_Jira
                                       + "{color}* - Senha: *{color:#0747A6}"
                                       + tbSenhaRIT.Text
                                       + "{color}* \n{code:java}\n \n[HOSTNAME]"
-                                      + "\nhostname=" + tbHostname.Text
+                                      + "\nhostname=" + tbHostnameRIT.Text
                                       + "\n[DATABASE]"
-                                      + "\ndatabase=" + tbDatabase.Text
+                                      + "\ndatabase=" + tbDatabaseRIT.Text
                                       + "\n[PORTA]"
-                                      + "\nporta=" + tbPorta.Text
+                                      + "\nporta=" + tbPortaRIT.Text
                                       + "\n[USUARIO]"
-                                      + "\nusername=" + tbUsuario.Text
+                                      + "\nusername=" + tbUsuarioRIT.Text
                                       + "\n \n{code}\n{panel}"
                                       //  Informações do usuário
                                       + "{panel:title=*CARACTERÍSTICAS DO USUÁRIO SE PRECISAR:*|borderStyle=solid|borderColor=#1c1c1c|titleBGColor=#607B8B|bgColor=#C6E2FF|titleColor=white}"
@@ -278,10 +278,10 @@ namespace GeradorTicket_Jira
              }
              else if (tbEscolhas.SelectedTab.Equals(tbRAResumido))
              {
-                 string solicitacao = tbSolicitacaoCliente.Text;
-                 string justificativa = tbJustificativaCliente.Text;
-                 string requisitos = tbRequisitosImplementacao.Text;
-                 string resultado = tbResultadosEsperados.Text;
+                 string solicitacao = tbJustificativaAnalise.Text;
+                 string justificativa = tbModulo.Text;
+                 string requisitos = "======================= AJUSTAR ==========================";
+                 string resultado = "======================= AJUSTAR ==========================";
                  string reproduzido = "{panel:title=*REGISTRO DE ANÁLISE - RA RESUMIDO*|borderStyle=solid|borderColor=#1c1c1c|titleBGColor=#8b3a62|bgColor=#fff0f5|titleColor=white}"
                                       + "\n*RESUMO DA SOLICITAÇÃO DO CLIENTE:*\n"
                                       + solicitacao
@@ -638,5 +638,7 @@ namespace GeradorTicket_Jira
         {
             return cbMultiEmpresa.Checked ? textMultiEmpresa.Text.ToUpper() : "Não";
         }
+
+
     }
 }
