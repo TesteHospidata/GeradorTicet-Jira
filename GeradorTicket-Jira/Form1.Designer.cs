@@ -173,14 +173,11 @@
             this.tbHostnameLiberacao = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
             this.tbRAResumido = new System.Windows.Forms.TabPage();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.lblSolicitacaoCliente = new System.Windows.Forms.TextBox();
-            this.tbResultadosEsperados = new System.Windows.Forms.TextBox();
-            this.tbRequisitosImplementacao = new System.Windows.Forms.TextBox();
-            this.tbJustificativaCliente = new System.Windows.Forms.TextBox();
-            this.tbSolicitacaoCliente = new System.Windows.Forms.TextBox();
+            this.lblCasoDeUso = new System.Windows.Forms.TextBox();
+            this.lblModulo = new System.Windows.Forms.TextBox();
+            this.lblJustificativaAnalise = new System.Windows.Forms.TextBox();
+            this.tbModulo = new System.Windows.Forms.TextBox();
+            this.tbJustificativaAnalise = new System.Windows.Forms.TextBox();
             this.rbTesteUnit = new System.Windows.Forms.TabPage();
             this.label16 = new System.Windows.Forms.Label();
             this.tbSenhaUnitario = new System.Windows.Forms.TextBox();
@@ -431,7 +428,7 @@
             this.textMultiEmpresa.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.textMultiEmpresa.Enabled = false;
             this.textMultiEmpresa.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textMultiEmpresa.Location = new System.Drawing.Point(520, 21);
+            this.textMultiEmpresa.Location = new System.Drawing.Point(532, 22);
             this.textMultiEmpresa.Name = "textMultiEmpresa";
             this.textMultiEmpresa.Size = new System.Drawing.Size(118, 20);
             this.textMultiEmpresa.TabIndex = 12;
@@ -442,11 +439,11 @@
             this.cbMultiEmpresa.AutoSize = true;
             this.cbMultiEmpresa.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cbMultiEmpresa.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cbMultiEmpresa.Location = new System.Drawing.Point(440, 24);
+            this.cbMultiEmpresa.Location = new System.Drawing.Point(430, 24);
             this.cbMultiEmpresa.Name = "cbMultiEmpresa";
-            this.cbMultiEmpresa.Size = new System.Drawing.Size(74, 17);
+            this.cbMultiEmpresa.Size = new System.Drawing.Size(94, 17);
             this.cbMultiEmpresa.TabIndex = 11;
-            this.cbMultiEmpresa.Text = "Instituicao";
+            this.cbMultiEmpresa.Text = "Multiempresa: ";
             this.cbMultiEmpresa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cbMultiEmpresa.UseVisualStyleBackColor = true;
             this.cbMultiEmpresa.CheckedChanged += new System.EventHandler(this.cbMultiEmpresa_CheckedChanged);
@@ -523,7 +520,7 @@
             this.cbArea.BackColor = System.Drawing.SystemColors.MenuText;
             this.cbArea.ForeColor = System.Drawing.SystemColors.Window;
             this.cbArea.FormattingEnabled = true;
-            this.cbArea.Items.AddRange(new object[] { "NÃO INFORMADO", "ADMINISTRAÇÃO", "AGENDAMENTO", "ALMOXARIFADO", "AMBULATÓRIO", "COMPRAS", "CENTRO CIRÚRGICO", "CONTABILIDADE", "DIAGNOSE TERAPIA", "ENFERMAGEM", "FARMÁCIA", "FATURAMENTO", "FINANCEIRO", "GESTÃO DE PENDÊNCIAS", "HOTELARIA", "INTERNAÇÃO", "NUTRIÇÃO", "SAME" });
+            this.cbArea.Items.AddRange(new object[] { "NÃO INFORMADO", "ADMINISTRAÇÃO", "AGENDAMENTO", "ALMOXARIFADO", "AMBULATÓRIO", "CENTRO CIRÚRGICO", "COMPRAS", "CONTABILIDADE", "DIAGNOSE TERAPIA", "ENFERMAGEM", "FARMÁCIA", "FATURAMENTO", "FINANCEIRO", "GESTÃO DE PENDÊNCIAS", "HOTELARIA", "INTERNAÇÃO", "NUTRIÇÃO", "RECEPÇÂO", "SAME" });
             this.cbArea.Location = new System.Drawing.Point(55, 48);
             this.cbArea.Name = "cbArea";
             this.cbArea.Size = new System.Drawing.Size(121, 21);
@@ -534,9 +531,9 @@
             // 
             this.tbVersao.BackColor = System.Drawing.SystemColors.MenuText;
             this.tbVersao.ForeColor = System.Drawing.SystemColors.Window;
-            this.tbVersao.Location = new System.Drawing.Point(173, 21);
+            this.tbVersao.Location = new System.Drawing.Point(165, 20);
             this.tbVersao.Name = "tbVersao";
-            this.tbVersao.Size = new System.Drawing.Size(52, 20);
+            this.tbVersao.Size = new System.Drawing.Size(68, 20);
             this.tbVersao.TabIndex = 2;
             this.tbVersao.Text = "5.79.36";
             // 
@@ -602,7 +599,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(118, 26);
+            this.label2.Location = new System.Drawing.Point(110, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 2;
@@ -1425,7 +1422,7 @@
             this.btnCopiaCelular.Name = "btnCopiaCelular";
             this.btnCopiaCelular.Size = new System.Drawing.Size(125, 23);
             this.btnCopiaCelular.TabIndex = 14;
-            this.btnCopiaCelular.Text = "Sem Formação";
+            this.btnCopiaCelular.Text = "Sem Formatação";
             this.btnCopiaCelular.UseVisualStyleBackColor = true;
             this.btnCopiaCelular.Click += new System.EventHandler(this.btnCopiaCelular_Click);
             // 
@@ -1769,15 +1766,14 @@
             // 
             // tbRAResumido
             // 
+            this.tbRAResumido.AutoScroll = true;
+            this.tbRAResumido.AutoScrollMargin = new System.Drawing.Size(0, 1000);
             this.tbRAResumido.BackColor = System.Drawing.Color.Black;
-            this.tbRAResumido.Controls.Add(this.textBox7);
-            this.tbRAResumido.Controls.Add(this.textBox6);
-            this.tbRAResumido.Controls.Add(this.textBox5);
-            this.tbRAResumido.Controls.Add(this.lblSolicitacaoCliente);
-            this.tbRAResumido.Controls.Add(this.tbResultadosEsperados);
-            this.tbRAResumido.Controls.Add(this.tbRequisitosImplementacao);
-            this.tbRAResumido.Controls.Add(this.tbJustificativaCliente);
-            this.tbRAResumido.Controls.Add(this.tbSolicitacaoCliente);
+            this.tbRAResumido.Controls.Add(this.lblCasoDeUso);
+            this.tbRAResumido.Controls.Add(this.lblModulo);
+            this.tbRAResumido.Controls.Add(this.lblJustificativaAnalise);
+            this.tbRAResumido.Controls.Add(this.tbModulo);
+            this.tbRAResumido.Controls.Add(this.tbJustificativaAnalise);
             this.tbRAResumido.ForeColor = System.Drawing.SystemColors.Control;
             this.tbRAResumido.Location = new System.Drawing.Point(4, 25);
             this.tbRAResumido.Name = "tbRAResumido";
@@ -1785,89 +1781,57 @@
             this.tbRAResumido.TabIndex = 6;
             this.tbRAResumido.Text = "RA Resumido";
             // 
-            // textBox7
+            // lblCasoDeUso
             // 
-            this.textBox7.BackColor = System.Drawing.SystemColors.MenuText;
-            this.textBox7.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox7.Location = new System.Drawing.Point(9, 359);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(167, 20);
-            this.textBox7.TabIndex = 27;
-            this.textBox7.Text = "Resultados Esperados:";
+            this.lblCasoDeUso.BackColor = System.Drawing.SystemColors.MenuText;
+            this.lblCasoDeUso.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblCasoDeUso.Location = new System.Drawing.Point(10, 241);
+            this.lblCasoDeUso.Name = "lblCasoDeUso";
+            this.lblCasoDeUso.Size = new System.Drawing.Size(72, 20);
+            this.lblCasoDeUso.TabIndex = 26;
+            this.lblCasoDeUso.Text = "Caso de Uso: ";
             // 
-            // textBox6
+            // lblModulo
             // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.MenuText;
-            this.textBox6.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox6.Location = new System.Drawing.Point(10, 241);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(167, 20);
-            this.textBox6.TabIndex = 26;
-            this.textBox6.Text = "Requisitos para Implementação:";
+            this.lblModulo.BackColor = System.Drawing.SystemColors.MenuText;
+            this.lblModulo.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblModulo.Location = new System.Drawing.Point(9, 120);
+            this.lblModulo.Name = "lblModulo";
+            this.lblModulo.Size = new System.Drawing.Size(155, 20);
+            this.lblModulo.TabIndex = 25;
+            this.lblModulo.Text = "Módulos/Menus Imapactados:";
             // 
-            // textBox5
+            // lblJustificativaAnalise
             // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.MenuText;
-            this.textBox5.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox5.Location = new System.Drawing.Point(9, 120);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(167, 20);
-            this.textBox5.TabIndex = 25;
-            this.textBox5.Text = "Justificativa da Solicitação:";
+            this.lblJustificativaAnalise.BackColor = System.Drawing.SystemColors.MenuText;
+            this.lblJustificativaAnalise.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblJustificativaAnalise.Location = new System.Drawing.Point(9, 5);
+            this.lblJustificativaAnalise.Name = "lblJustificativaAnalise";
+            this.lblJustificativaAnalise.Size = new System.Drawing.Size(118, 20);
+            this.lblJustificativaAnalise.TabIndex = 24;
+            this.lblJustificativaAnalise.Text = "Justificativa da Analise: ";
             // 
-            // lblSolicitacaoCliente
+            // tbModulo
             // 
-            this.lblSolicitacaoCliente.BackColor = System.Drawing.SystemColors.MenuText;
-            this.lblSolicitacaoCliente.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblSolicitacaoCliente.Location = new System.Drawing.Point(9, 5);
-            this.lblSolicitacaoCliente.Name = "lblSolicitacaoCliente";
-            this.lblSolicitacaoCliente.Size = new System.Drawing.Size(167, 20);
-            this.lblSolicitacaoCliente.TabIndex = 24;
-            this.lblSolicitacaoCliente.Text = "Solicitação do Cliente:";
+            this.tbModulo.AcceptsReturn = true;
+            this.tbModulo.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.tbModulo.ForeColor = System.Drawing.SystemColors.Window;
+            this.tbModulo.Location = new System.Drawing.Point(9, 142);
+            this.tbModulo.Multiline = true;
+            this.tbModulo.Name = "tbModulo";
+            this.tbModulo.Size = new System.Drawing.Size(810, 87);
+            this.tbModulo.TabIndex = 21;
             // 
-            // tbResultadosEsperados
+            // tbJustificativaAnalise
             // 
-            this.tbResultadosEsperados.AcceptsReturn = true;
-            this.tbResultadosEsperados.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.tbResultadosEsperados.ForeColor = System.Drawing.SystemColors.Window;
-            this.tbResultadosEsperados.Location = new System.Drawing.Point(9, 382);
-            this.tbResultadosEsperados.Multiline = true;
-            this.tbResultadosEsperados.Name = "tbResultadosEsperados";
-            this.tbResultadosEsperados.Size = new System.Drawing.Size(825, 87);
-            this.tbResultadosEsperados.TabIndex = 23;
-            // 
-            // tbRequisitosImplementacao
-            // 
-            this.tbRequisitosImplementacao.AcceptsReturn = true;
-            this.tbRequisitosImplementacao.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.tbRequisitosImplementacao.ForeColor = System.Drawing.SystemColors.Window;
-            this.tbRequisitosImplementacao.Location = new System.Drawing.Point(9, 264);
-            this.tbRequisitosImplementacao.Multiline = true;
-            this.tbRequisitosImplementacao.Name = "tbRequisitosImplementacao";
-            this.tbRequisitosImplementacao.Size = new System.Drawing.Size(825, 87);
-            this.tbRequisitosImplementacao.TabIndex = 22;
-            // 
-            // tbJustificativaCliente
-            // 
-            this.tbJustificativaCliente.AcceptsReturn = true;
-            this.tbJustificativaCliente.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.tbJustificativaCliente.ForeColor = System.Drawing.SystemColors.Window;
-            this.tbJustificativaCliente.Location = new System.Drawing.Point(9, 142);
-            this.tbJustificativaCliente.Multiline = true;
-            this.tbJustificativaCliente.Name = "tbJustificativaCliente";
-            this.tbJustificativaCliente.Size = new System.Drawing.Size(825, 87);
-            this.tbJustificativaCliente.TabIndex = 21;
-            // 
-            // tbSolicitacaoCliente
-            // 
-            this.tbSolicitacaoCliente.AcceptsReturn = true;
-            this.tbSolicitacaoCliente.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.tbSolicitacaoCliente.ForeColor = System.Drawing.SystemColors.Window;
-            this.tbSolicitacaoCliente.Location = new System.Drawing.Point(9, 27);
-            this.tbSolicitacaoCliente.Multiline = true;
-            this.tbSolicitacaoCliente.Name = "tbSolicitacaoCliente";
-            this.tbSolicitacaoCliente.Size = new System.Drawing.Size(825, 87);
-            this.tbSolicitacaoCliente.TabIndex = 20;
+            this.tbJustificativaAnalise.AcceptsReturn = true;
+            this.tbJustificativaAnalise.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.tbJustificativaAnalise.ForeColor = System.Drawing.SystemColors.Window;
+            this.tbJustificativaAnalise.Location = new System.Drawing.Point(9, 27);
+            this.tbJustificativaAnalise.Multiline = true;
+            this.tbJustificativaAnalise.Name = "tbJustificativaAnalise";
+            this.tbJustificativaAnalise.Size = new System.Drawing.Size(810, 87);
+            this.tbJustificativaAnalise.TabIndex = 20;
             // 
             // rbTesteUnit
             // 
@@ -2434,14 +2398,11 @@
         private System.Windows.Forms.TextBox tbPortaRIT;
         private System.Windows.Forms.TextBox tbHostnameRIT;
         private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox lblSolicitacaoCliente;
-        private System.Windows.Forms.TextBox tbResultadosEsperados;
-        private System.Windows.Forms.TextBox tbRequisitosImplementacao;
-        private System.Windows.Forms.TextBox tbJustificativaCliente;
-        private System.Windows.Forms.TextBox tbSolicitacaoCliente;
+        private System.Windows.Forms.TextBox lblCasoDeUso;
+        private System.Windows.Forms.TextBox lblModulo;
+        private System.Windows.Forms.TextBox lblJustificativaAnalise;
+        private System.Windows.Forms.TextBox tbModulo;
+        private System.Windows.Forms.TextBox tbJustificativaAnalise;
         private System.Windows.Forms.TextBox tbOrientacoes;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.ToolStripMenuItem opçõesToolStripMenuItem;
